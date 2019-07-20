@@ -10,27 +10,29 @@
 // And add it to the DOM in the .headerContainer component
 
 function Header() {
-    const header=document.querySelector('.header-container');
-
+    
 //   creating elements
-    const headerDIV=header.createElement('div').classList.add('header');
+    const headerDIV=document.createElement('div');
+    headerDIV.classList.add('header');
 
-    const headerSpan=header.createElement('span').classList.add('date').textContent('SMARCH 28, 2019');
+    const headerSpan=document.createElement('span');
+    headerSpan.classList.add('date');
+    headerSpan.textContent='SMARCH 28, 2019';
 
-    const headerH1=header.createElement('h1').textContent('Lambda Times');
+    const headerH1=document.createElement('h1');
+    headerH1.textContent='Lambda Times';
 
-    const headerSpan2=header.createElement('span').classList.add('temp').textContent('98°');
+    const headerSpan2=document.createElement('span');
+    headerSpan2.classList.add('temp');
+    headerSpan2.textContent='98°';
 
 // appending elements
 
-    header.appendChild(headerDIV);
-    header.appendChild(headerSpan);
-    header.appendChild(headerH1);
-    header.appendChild(headerSpan2);
+    headerDIV.appendChild(headerSpan);
+    headerDIV.appendChild(headerH1);
+    headerDIV.appendChild(headerSpan2);
 
-
-    
-    return header;
+    return headerDIV;
 }
 
 const mainHeader=document.querySelector('.header-container');
